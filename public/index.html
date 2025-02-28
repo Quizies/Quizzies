@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div id="top-bar">
+    <div id="user-info" class="hidden">
+      <span id="points">Points: 0</span>
+      <img id="profilePicture" src="" alt="Profile Picture">
+      <button id="signOutBtn">Sign Out</button>
+    </div>
+  </div>
+
+  <div id="quiz-container">
+    <h1>Quiz Generator</h1>
+
+    <div id="auth-section">
+      <button id="googleSignInBtn">Sign in with Google</button>
+    </div>
+
+    <div id="quiz-generator" class="hidden">
+      <div class="input-group">
+        <label for="language">Language:</label>
+        <select id="language" required>
+          <option value="english">English</option>
+          <option value="arabic">Arabic</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="subject">Subject:</label>
+        <select id="subject" required>
+          <option value="math">Math</option>
+          <option value="chemistry">Chemistry</option>
+          <option value="physics">Physics</option>
+          <option value="biology">Biology</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="paragraphs">Paragraphs:</label>
+        <textarea id="paragraphs" placeholder="Enter the information for the quiz (e.g., details, facts)" required></textarea>
+      </div>
+
+      <button id="generateQuizBtn">Generate Quiz</button>
+    </div>
+
+    <div id="quizOutput" class="hidden">
+      <div id="progress">
+        <span id="questionNumber">Question 1 of 10</span>
+        <span id="grade">Grade: 0/100</span>
+      </div>
+      <div id="questionContainer"></div>
+      <button id="nextQuestionBtn" class="hidden">Next Question</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
